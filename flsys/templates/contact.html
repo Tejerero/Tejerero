@@ -1,0 +1,37 @@
+<!-- prettier-ignore -->
+{% extends 'template.html' %}
+{% block title %}Flavours 101{% endblock %}
+{% load static %}
+{% block form_table_div %}
+
+<div class="contact-div">
+	<div class="contact-section">
+	    <div class="contact-info">
+	        <div>
+	           <i class="fas fa-map-marker-alt" style="color: #e30b5d; font-size: 30px"></i> &nbsp;Dasmarinas Cavite, Philippines
+	        </div>
+	        <div>
+	            <i class="fas fa-envelope" style="color: #e30b5d; font-size: 30px"></i> &nbsp;flavours101@gmail.com
+	        </div>
+	        <div>
+	            <i class="fas fa-phone" style="color: #e30b5d; font-size: 30px"></i> &nbsp;+63 9285 764 024
+	        </div>
+	        <div>
+	           <i class="fas fa-clock" style="color: #e30b5d; font-size: 30px"></i> &nbsp;Mon - Fri 8:00 AM to 5:00 PM
+	        </div>
+	    </div>
+	    <div class="contact-form">
+	        <h1>Contact Us</h1> 
+	        <form method="post">
+	            <input type="text" id="contact_name" name="contact_name" class="text-box" placeholder="Your Name" required>
+	            <input type="email " id="contact_email" name="contact_email" class="text-box" placeholder="Your Email " required>
+	            <textarea name="message" id="message" rows="5" placeholder="Your Message " required></textarea>
+
+	            <input type="submit" name="submit " class="send-btn " value="Send ">
+	        {% csrf_token %}
+	        </form>
+	    </div>
+	</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{% load static %}
+		<title>{% block title %}Flavours 101{% endblock %}</title>
+		<link rel="shortcut icon" href="{% static 'img/flavor101.png' %}" type="image/x-icon" />
+		<link rel="stylesheet" href="{% static 'css/style.css' %}">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<script type="text/javascript" src="{% static 'js/forms.js' %}" defer onload="init()"></script>
+	</head>
+	<body>
+		<img src="{% static 'img/logo.png' %}" alt="Flavours101" />
+
+		<div class="share">
+			<a href="https://www.facebook.com/aprilyn.tejerero/"> 
+				<img src="{% static 'icons/logo-facebook.svg' %}" alt="fb"> 
+			</a>
+			<a href="https://www.instagram.com/aprlyn.tejerero/"> 
+				<img src="{% static 'icons/logo-instagram.svg' %}" alt="ig"> 
+			</a>
+			<a href="https://twitter.com/AprilynTej"> 
+				<img src="{% static 'icons/logo-twitter.svg' %}" alt="ig"> 
+			</a>
+		</div>
+
+		<button class="btn-form" type="button" onclick="location.href='/flsys/CookingClass/'">Book Your Class Now!</button>
+
+		<div id="container">
+			 <h2 class="nav">
+		        <a href="/flsys/HomePage/">Home</a>
+		        <a href="/flsys/Recipes/">Recipes</a>
+		        <a href="/flsys/CookingClass/">Cooking Class</a>
+		        <a href="/flsys/ContactUs/">Contact</a>
+		    </h2>
+		    <h1 class="h1" style="text-align: center;">{% block h1_text %}{% endblock %}</h1>
+		</div>
+
+			{% block form_table_div %}{% endblock %}
+	</body>
+</html>

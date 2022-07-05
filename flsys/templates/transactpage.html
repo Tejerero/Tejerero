@@ -1,0 +1,66 @@
+<!-- prettier-ignore -->
+{% extends 'template.html' %}
+{% block title %} Flavours 101 {% endblock %}
+{% block h1_text %} Review your information below: {% endblock %}
+{% load static %}
+{% block form_table_div %}
+
+<script type="text/javascript">
+
+	function checker(){
+		var result = confirm('Are you sure?');
+		if (result == false) {
+			event.preventDefault();
+		}
+	}
+</script>
+
+
+<table class="summary-table">
+	<tr>
+		<th style="padding: 3px 10px; text-align: left;">Name</th>
+		<th style="padding: 3px 10px; text-align: left;">Phone Number</th>
+		<th style="padding: 3px 10px; text-align: left;">Email</th>
+		<th style="padding: 3px 10px; text-align: left;">Cuisine Class</th>
+		<th style="padding: 3px 10px; text-align: left;">Date</th>
+		<th style="padding: 3px 10px; text-align: left;">Time</th>
+		<th style="padding: 3px 10px; text-align: left;">Mode of Class</th>
+		<th style="padding: 3px 10px; text-align: left;">Tickets</th>
+		<th style="padding: 3px 10px; text-align: left;">Mode of Payment</th>
+		<th style="padding: 3px 10px; text-align: left;">Status</th>
+	</tr>
+	<hr>
+	<tr>
+		<td>{{cuiReg.firstname}} {{cuiReg.surname}}</td>
+		<td>{{cuiReg.number}}</td>
+		<td>{{cuiReg.email}}</td>
+
+		{% for cuisine in cuisineClass %}
+		<td>{{cuisine.cuisine}}</td>
+		{% endfor %}
+
+		{% for schedule in schedClass %}
+		<td>{{schedule.date}}</td>
+		<td>{{schedule.time}}</td>
+		<td>{{schedule.mode}}</td>
+		{% endfor %}
+
+		{% for checkout in checkoutMod %}
+		<td>{{checkout.tickets}}</td>
+		<td>{{checkout.payment}}</td>
+		<td>Pending</td>
+
+		{% endfor %}
+
+	</tr>
+</table>
+<br>
+<div class="sum-buttons" style="position: absolute; right: 500px;">
+	<button class="btn-checkout" id="btnProceed" onclick="checker()" ><a style="text-decoration: none; color: #fff;" href="/flsys/CookingClass/">OK</a></button>
+	<button class="btn-Cancel" onclick="checker()" id="btnCancel" name=""><a style="text-decoration: none; color: black;" href="/flsys/{{ cuiReg.id }}/delete">Cancel Booking</a></button>
+	<button class="btn-Cancel" id="btnUpdate" name=""><a style="text-decoration: none; color: black;" href="/flsys/{{ cuiReg.id }}/edit">Edit</a></button>
+</div>
+
+<br><br>
+
+{% endblock %}

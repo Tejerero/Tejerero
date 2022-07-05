@@ -1,0 +1,39 @@
+<!-- prettier-ignore -->
+{% extends 'template.html' %}
+{% block title %}Flavours 101{% endblock %}
+{% load static %}
+{% block form_table_div %}
+
+<div class="goback">
+	<button class="goback-btn" type="button" onclick="location.href='/flsys/Recipes/'">Go back</button>
+</div>  
+
+<h1 class="recipe-label2">
+	Easy Recipes for Meals<br />
+</h1>
+
+<br /><br />
+
+<div class="recipes">
+	<section>
+		<a href="/flsys/Sandwiches/" >
+    		<img src="{% static 'img/sandwich.jpg' %}" width="270" height="200" alt="Unsplash"/>
+    		<figcaption>Tuna Salad Sandwich</figcaption>
+  		</a>
+	</section>
+	<section>
+		<a href="/flsys/Salad/">
+    		<img src="{% static 'img/bean.jpg' %}" width="270" height="200" alt="ChonasKitchen" />
+    		<figcaption>Green Bean Salad</figcaption>
+  		</a>
+	</section>
+	<section>
+		<a href="/flsys/Pinakbet/" >
+    		<img src="{% static 'img/pinakbet.jpg' %}" width="270" height="200" alt="ChonasKitchen"/>
+    		<figcaption>Filipino Pinakbet</figcaption>
+  		</a>
+	</section>
+</div>
+
+
+{% endblock %}

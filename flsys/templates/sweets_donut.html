@@ -1,0 +1,164 @@
+<!-- prettier-ignore -->
+{% extends 'template.html' %}
+{% block title %}Flavours 101{% endblock %}
+{% load static %}
+{% block form_table_div %}
+
+<div class="goback">
+    <button class="goback-btn" type="button" onclick="location.href='/flsys/Sweets/'">Go back</button>
+</div>
+
+<div>
+    <button class="rating-button" type="button" onclick="location.href='/flsys/RatePancake/'">Rate this Recipe</button>
+</div>
+
+<div class="page">
+    <div class="recipe-page">
+        <section class="single-recipe">
+            <img src="{% static 'img/donut.jpg' %}" class="img recipe-single-img" />
+            <article class="recipe-info">
+                <h1 class="single-label">Homemade Doughnuts</h1>
+                <p>
+                    Homemade doughnuts are much easier than you would ever believe they are. You can make these fluffy and soft doughnuts at home with these easy recipe. These fluffy and soft doughnuts are what you want to eat when you're craving for something sweet. You can also get creative with the toppings, you can topped it with a chocolate glaze and sprinkles, or stick to the classic cinnamon-sugar coating. It's the doughnut you'll want to eat with a cup of coffee.
+                </p>
+                <cite class="recipe-citation">From
+                    <a href="https://www.yummy.ph/recipe/homemade-doughnuts-recipe">Yummy.ph</a>
+                    by Roselle Miranda, August 1, 2017
+                </cite>
+                <div class="recipe-icons">
+                    <article>
+                        <i class="fa-solid fa-clock" style="color: #e30b5d; font-size: 25px"></i>
+                        <h5>Prep. Time</h5>
+                        <p>10 min.</p>
+                    </article>
+                    <article>
+                        <i class="fa fa-clock-o" aria-hidden="true" style="color: #e30b5d; font-size: 25px"></i>
+                        <h5>Cooking Time</h5>
+                        <p>35 min.</p>
+                    </article>
+                    <article>
+                        <i class="fa-solid fa-user-group" style="color: #e30b5d; font-size: 25px"></i>
+                        <h5>Serving</h5>
+                        <p>12 servings</p>
+                    </article>
+                </div>
+            </article>
+        </section>
+        <section class="recipe-content">
+            <article class="recipe-ingredient">
+                <div>
+                    <h4 class="single-label2">Ingredients</h4>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">3 1/2 cups all-purpose flour</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">1 tablespoon instant dry yeast</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">1/2 teaspoon salt</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">1 cup water</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">1/4 cup sugar</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">1 egg</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">3 tablespoons butter, melted</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">canola oil, for frying</p>
+                    </div>
+                </div>          
+            </article>
+            <article class="instruction-main">
+                <h4 class="single-label2">Instructions</h4>
+                <div class="instruction">
+                    <header>
+                        <p>step 1</p>
+                        <div></div>
+                    </header>
+                    <div class="ins-checkbox">
+                    <input type="checkbox">
+                        <p>
+                            In a mixing bowl, combine flour, salt, and yeast. Set aside.
+                        </p>
+                    </div>
+                </div>
+                <div class="instruction">
+                    <header>
+                        <p>step 2</p>
+                        <div></div>
+                    </header>
+                    <div class="ins-checkbox">
+                    <input type="checkbox">
+                        <p>
+                            On low speed, combine water, sugar, egg, and melted butter in a mixing bowl. Combine half of the flour mixture with the wet ingredients and stir until just combined. Mix in the remaining flour until everything is well mixed. Increase the speed to medium and continue to mix the dough, scraping down the sides as needed, for about 5 minutes, or until it is smooth.
+                        </p>
+                    </div>
+                </div>
+                <div class="instruction">
+                    <header>
+                        <p>step 3</p>
+                        <div></div>
+                    </header>
+                    <div class="ins-checkbox">
+                    <input type="checkbox">
+                        <p>
+                            Transfer dough to a large oiled bowl. Cover with a clean kitchen towel, and let rise in a warm place for about 1 hour or until doubled in size.
+                        </p>
+                    </div>
+                </div>
+                <div class="instruction">
+                    <header>
+                        <p>step 4</p>
+                        <div></div>
+                    </header>
+                    <div class="ins-checkbox">
+                    <input type="checkbox">
+                        <p>
+                            Turn out onto a floured surface after removing the towel. Roll out the dough to a thickness of 1/4 inch. Cut doughnut shapes into the dough with a doughnut cutter or a 3-inch and 1-inch cutter, rerolling leftovers to form more doughnuts or holes. Place prepared doughnuts on a greased baking sheet until deep frying oil is ready.
+                        </p>
+                    </div>
+                </div>
+                <div class="instruction">
+                    <header>
+                        <p>step 5</p>
+                        <div></div>
+                    </header>
+                    <div class="ins-checkbox">
+                    <input type="checkbox">
+                        <p>
+                            Heat oil to 375?F in a deep sauté pan. Place doughnuts in hot oil, 2-3 at a time. Use chopsticks or back of a wooden spoon to flip doughnuts over. Use slotted spoon for cooking the holes. Fry until golden brown on all sides.
+                        </p>
+                    </div>
+                </div>
+                <div class="instruction">
+                    <header>
+                        <p>step 6</p>
+                        <div></div>
+                    </header>
+                    <div class="ins-checkbox">
+                    <input type="checkbox">
+                        <p>
+                            Drain on paper towels. Serve doughnuts with your preferred filling or topping.
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </div>
+</div>
+
+{% endblock %}

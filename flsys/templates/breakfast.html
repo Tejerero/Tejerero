@@ -1,0 +1,38 @@
+<!-- prettier-ignore -->
+{% extends 'template.html' %}
+{% block title %}Flavours 101{% endblock %}
+{% load static %}
+{% block form_table_div %}
+
+<div class="goback">
+	<button class="goback-btn" type="button" onclick="location.href='/flsys/Recipes/'">Go back</button>
+</div>  
+
+<h1 class="recipe-label2">
+	Easy Recipes for Breakfast<br />
+</h1>
+
+<br /><br />
+
+<div class="recipes">
+	<section>
+		<a href="/flsys/BreakfastPancakes/" >
+    		<img src="{% static 'img/Breakfast.jpg' %}" alt="Unsplash"/>
+    		<figcaption>Buttermilk Pancakes</figcaption>
+  		</a>
+	</section>
+	<section>
+		<a href="/flsys/BreakfastGarlicRice/">
+    		<img src="{% static 'img/GarlicRice.jpg' %}" alt="Pinterest" />
+    		<figcaption>Garlic Fried Rice</figcaption>
+  		</a>
+	</section>
+	<section>
+		<a href="/flsys/BreakfastFrenchToast/" >
+    		<img src="{% static 'img/toast.jpg' %}" alt="Unsplash"/>
+    		<figcaption>Classic French Toast</figcaption>
+  		</a>
+	</section>
+</div>
+
+{% endblock %}

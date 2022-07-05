@@ -1,0 +1,79 @@
+<!-- prettier-ignore -->
+{% extends 'template.html' %}
+{% block title %}Flavours 101{% endblock %}
+{% load static %}
+{% block form_table_div %}
+
+<div class="goback">
+    <button class="goback-btn" type="button" onclick="location.href='/flsys/Recipes/'">Go back</button>
+</div>
+
+<h1 class="single-label">Recipe Ratings</h1>
+
+<form name="myForm" method="POST">
+	{% csrf_token %}
+
+	<div style="position: absolute; top: 200px; left: 10%;">
+	    <label>Name: </label>
+		<input type="text" id="rate_name" size="30" name="rate_name" placeholder="Enter your name..." required> <br><br>
+		<label>Recipe Name: </label>
+		<input type="text" id="recipe_name" size="30" name="recipe_name" placeholder="Name of recipe..." required> <br><br>
+		<label>Date: </label>
+		<input type="date" size="30" min="2022-01-01" max="2023-01-01" id="rate_date" name="rate_date" required> <br>
+	</div>
+
+	<div class="rate-description">
+	    <p>Rate this Recipe:</p>
+	</div>
+	<div class="star-rating">
+	    <div class="rating">
+	        <input type="radio" name="rating" id="star1" value="5"><label for="star1"></label>
+	        <input type="radio" name="rating" id="star2" value="4"><label for="star2"></label>
+	        <input type="radio" name="rating" id="star3" value="3"><label for="star3"></label>
+	        <input type="radio" name="rating" id="star4" value="2"><label for="star4"></label>
+	        <input type="radio" name="rating" id="star5" value="1"><label for="star5"></label>
+	    </div>
+	    <h4 id="rating-value"></h4>
+	    <input type="submit" name="submit " class="rating-submit " value="Submit ">
+	</div>
+</form>
+
+<script type="text/javascript">
+    let star = document.querySelectorAll('input');
+    let showValue = document.querySelector('#rating-value');
+
+    for (let i = 0; i < star.length; i++) {
+        star[i].addEventListener('click', function() {
+            i = this.value;
+
+            showValue.innerHTML = i + " out of 5";
+        });
+    }
+</script>
+
+<table class="rating-table" style="position: absolute; top: 30%; right: 5%;">
+	<tr>
+		<th style="padding: 3px 10px; text-align: left;">ID</th>
+		<th style="padding: 3px 10px; text-align: left;">Name</th>
+		<th style="padding: 3px 10px; text-align: left;">Recipe Name</th>
+		<th style="padding: 3px 10px; text-align: left;">Date</th>
+		<th style="padding: 3px 10px; text-align: left;">Rating</th>
+		<th style="padding: 3px 10px; text-align: center;">Action</th>
+	</tr>
+	{% for item in ratePancake %}
+	<tr>
+		<td>{{forloop.counter}}.</td>
+		<td>{{ item.rate_name }}</td>
+		<td>{{ item.recipe_name }}</td>
+		<td>{{ item.rate_date }}</td>
+		<td>{{ item.rating }}</td>
+		<td>
+			<button><a style="text-decoration: none; color: black;" href="/flsys/editRating/{{ item.id }}">Edit</a></button>
+			<button><a style="text-decoration: none; color: black;" href="/flsys/deleteRating/{{ item.id }}">Delete</a></button>
+		</td>
+		
+	</tr>
+	{% endfor %}
+</table>
+
+{% endblock %}

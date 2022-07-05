@@ -1,0 +1,50 @@
+<!-- prettier-ignore -->
+{% extends 'template.html' %}
+{% block title %}Flavours 101{% endblock %}
+{% block h1_text %}Cooking Class Booking{% endblock %}
+{% load static %}
+{% block form_table_div %}
+
+<div>
+	<img src="{% static 'img/about.jpg' %}" style="height: 460px; position: absolute; left: 50px; top: 150px;">
+</div>
+
+<form name="myForm" onsubmit="return validate()" method="POST" action="/flsys/newlist_url/"> 
+	<div class="custom-info">
+		<fieldset class="input">
+			<legend>1 Information</legend>
+			<label>First Name: </label>
+			<input type="text" id="firstname" size="30" name="firstname" placeholder="First Name" required> <br>
+			<label>Surname: </label>
+			<input type="text" id="surname" size="30" name="surname" placeholder="Surname" required>
+			<br>
+			<label>Phone Number: </label>
+			<input type="tel" pattern="[0-9]{11}" id="number" size="30" name="number" placeholder="Phone Number" required>
+			 <br>
+			<label>Email: </label>
+			<input type="email" id="email" size="30" name="email" placeholder="Email" required>
+			<br><br><br><br>
+			<input class="btn-next" type="submit" id="btnNext" value="Next" name="submit">
+		</fieldset>
+	</div>
+	{% csrf_token %}
+</form>
+
+<div>
+	<img src="{% static 'img/monika.jpg' %}" style="height: 460px; position: absolute; right: 50px; top: 150px;">
+</div>
+
+<br />
+
+<table id="infoTable">
+	{% for item in registered %}
+	<tr>
+		<td>{{forloop.counter}}. {{ item.firstname }} {{ item.surname }}</td>
+		<td>{{ item.number }}</td>
+		<td>{{ item.email }}</td>
+	</tr>
+	{% endfor %}
+</table>
+
+
+{% endblock %}

@@ -1,0 +1,38 @@
+<!-- prettier-ignore -->
+{% extends 'template.html' %}
+{% block title %}Flavours 101{% endblock %}
+{% load static %}
+{% block form_table_div %}
+
+<div class="goback">
+	<button class="goback-btn" type="button" onclick="location.href='/flsys/Recipes/'">Go back</button>
+</div>  
+
+<h1 class="recipe-label2">
+	Easy Recipes for Meals<br />
+</h1>
+
+<br /><br />
+
+<div class="recipes">
+	<section class="sweets-caption">
+		<a href="/flsys/HomemadeDonuts/" >
+			<img src="{% static 'img/donut.jpg' %}" width="270" height="200" alt="flavours101"/>
+			<figcaption>Homemade Doughnuts</figcaption>
+			</a>
+	</section>
+	<section class="sweets-caption">
+		<a href="/flsys/Muffins/">
+			<img src="{% static 'img/muffin.jpg' %}" width="270" height="200" alt="flavours101" />
+			<figcaption>Banana Chocolate Chip Muffins</figcaption>
+			</a>
+	</section>
+	<section class="sweets-caption">
+		<a href="/flsys/Cupcakes/" >
+			<img src="{% static 'img/cupcake.jpg' %}" width="270" height="200" alt="flavours101"/>
+			<figcaption>Moist Chocolate Cupcakes</figcaption>
+			</a>
+	</section>
+</div>
+
+{% endblock %}

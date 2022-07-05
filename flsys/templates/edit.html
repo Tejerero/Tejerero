@@ -1,0 +1,72 @@
+<!-- prettier-ignore -->
+{% extends 'template.html' %}
+{% block title %} Flavours 101 {% endblock %}
+{% block h1_text %} Update Details: {% endblock %}
+{% load static %}
+{% block form_table_div %}
+
+<form name="myForm" method="POST" action="/flsys/edit/update/{{ cuiReg.id }}">
+	{% csrf_token %}
+
+	<div class="custom-info">
+		<fieldset class="input1">
+			<div>
+				<label>Firstname:</label>
+				<input type="text" name="firstname" value="{{cuiReg.firstname}}">
+			</div>
+			<div>
+				<label>Surname:</label>
+				<input type="text" name="surname" value="{{cuiReg.surname}}">
+			</div>
+			<div>
+				<label>Phone Number:</label>
+				<input type="tel" pattern="[0-9]{11}" name="number" value="{{cuiReg.number}}">
+			</div>
+			<div>
+				<label>Email:</label>
+				<input type="email" name="email" value="{{cuiReg.email}}">
+
+			</div>
+			<div>
+				<label>Cuisine:</label>
+				{% for cuisine in cuisineClass %}
+				<input type="text" name="cuisine" value="{{cuisine.cuisine}}">
+				{% endfor %}
+			</div>
+			<!-- <div>
+				<label>Date:</label>
+				
+				<input type="text" name="date" value="{{schedule.date}}">
+			</div> -->
+			<div>
+				{% for schedule in schedClass %}
+				<label>Time:</label>
+				<input type="text" name="time" value="{{schedule.time}}">
+			</div>
+			<div>
+				<label>Mode of Class:</label>
+				<input type="text" name="mode" value="{{schedule.mode}}">
+				{% endfor %}
+			</div>
+			<div>
+				<label>No. of Tickets:</label>
+				{% for checkout in checkoutMod %}
+				<input type="number" name="tickets" value="{{checkout.tickets}}">
+			</div>
+			<div>
+				<label>Mode of Payment:</label>
+				<input type="text" name="payment" value="{{checkout.payment}}">
+				{% endfor %}
+			</div>
+			<div>
+				<br>
+				<button type="submit" class="btn-next">Update</button>
+			</div>
+		</fieldset>
+	</div>
+</form>
+
+
+<br><br>
+
+{% endblock %}

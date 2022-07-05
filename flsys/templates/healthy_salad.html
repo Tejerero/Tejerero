@@ -1,0 +1,188 @@
+<!-- prettier-ignore -->
+{% extends 'template.html' %}
+{% block title %}Flavours 101{% endblock %}
+{% load static %}
+{% block form_table_div %}
+
+<div class="goback">
+    <button class="goback-btn" type="button" onclick="location.href='/flsys/Healthy/'">Go back</button>
+</div>
+
+<div>
+    <button class="rating-button" type="button" onclick="location.href='/flsys/RatePancake/'">Rate this Recipe</button>
+</div>
+
+<div class="page">
+    <div class="recipe-page">
+        <section class="single-recipe">
+            <img src="{% static 'img/bean.jpg' %}" class="img recipe-single-img" />
+            <article class="recipe-info">
+                <h1 class="single-label">Green Bean Salad</h1>
+                <p>
+                    This simple, healthy and delicious green bean salad recipe goes well with any grilled meat or fish, and it's simple to prepare. It may be prepared ahead of time in big quantities, making it great for meal planning or preparing for dinner parties and festive holiday celebrations! It is best when marinated together overnight or much longer for better results. 
+                </p>
+                <cite class="recipe-citation">From
+                    <a href="https://youtu.be/G2YtH1DOL4w">Chona's Kitchen</a>
+                    by Chona Howard, August 11, 2020
+                </cite>
+                <div class="recipe-icons">
+                    <article>
+                        <i class="fa-solid fa-clock" style="color: #e30b5d; font-size: 25px"></i>
+                        <h5>Prep. Time</h5>
+                        <p>10 min.</p>
+                    </article>
+                    <article>
+                        <i class="fa fa-clock-o" aria-hidden="true" style="color: #e30b5d; font-size: 25px"></i>
+                        <h5>Cooking Time</h5>
+                        <p>10 min.</p>
+                    </article>
+                    <article>
+                        <i class="fa-solid fa-user-group" style="color: #e30b5d; font-size: 25px"></i>
+                        <h5>Serving</h5>
+                        <p>4 Servings</p>
+                    </article>
+                </div>
+            </article>
+        </section>
+        <section class="recipe-content">
+            <article class="recipe-ingredient">
+                <div>
+                    <h4 class="single-label2">Ingredients</h4>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">196g green beens</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">122g sweet tomatoes (perino)</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">1 medium red onion</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">2-3 cloves garlic (chopped)</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">1/2 red bell pepper</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">1/2 cucumber</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">2 1/2 tbsp balsamic vinegar</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">1 1/2 olive oil</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">feta cheese (marinated)</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">2 tsp maple syrup</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">1-2 tsp honey</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">1/4 tsp black pepper</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">pinch of salt</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">Mixed dried fruits and nuts (Optional)</p>
+                    </div>
+                </div>
+            </article>
+            <article class="instruction-main">
+                <h4 class="single-label2">Instructions</h4>
+                <div class="instruction">
+                    <header>
+                        <p>step 1</p>
+                        <div></div>
+                    </header>
+                    <div class="ins-checkbox">
+                    <input type="checkbox">
+                        <p>
+                            In a cooking pot, boil water with a pinch of salt and when it boils add the raw green beans boil it for about 8 minutes or until tender-crisp. After 8 minutes transfer the green beans to a cold water, do not overcooked it. Then pat dry the beans with paper towel. Set Aside.
+                        </p>
+                    </div>
+                </div>
+                <div class="instruction">
+                    <header>
+                        <p>step 2</p>
+                        <div></div>
+                    </header>
+                    <div class="ins-checkbox">
+                    <input type="checkbox">
+                        <p>
+                            Cut the bellpeppers and cucumber in stripes. And cut the sweet tomatoes or perino in half. You can add other vegetables that suits your taste. 
+                        </p>
+                    </div>
+                </div>
+                <div class="instruction">
+                    <header>
+                        <p>step 3</p>
+                        <div></div>
+                    </header>
+                    <div class="ins-checkbox">
+                    <input type="checkbox">
+                        <p>
+                            In a mixing bowl, make the dressing, just add the olive oil, balsamic vinegar, garlic, salt, pepper, maple syrup, and honey, mix until well-combined.   
+                        </p>
+                    </div>
+                </div>
+                <div class="instruction">
+                    <header>
+                        <p>step 4</p>
+                        <div></div>
+                    </header>
+                    <div class="ins-checkbox">
+                    <input type="checkbox">
+                        <p>
+                            In a large mixing bowl, add the green beans and put a little bit of dressing, mix until well-combined. Then add all the vegetables and the marinated feta cheese.
+                        </p>
+                    </div>
+                </div>
+                <div class="instruction">
+                    <header>
+                        <p>step 5</p>
+                        <div></div>
+                    </header>
+                    <div class="ins-checkbox">
+                    <input type="checkbox">
+                        <p>
+                            Add the nuts and mixed dried fruits (Optional). Then add the remaining dressing. Mixed until well-combined.
+                        </p>
+                    </div>
+                </div>
+                <div class="instruction">
+                    <header>
+                        <p>step 6</p>
+                        <div></div>
+                    </header>
+                    <div class="ins-checkbox">
+                    <input type="checkbox">
+                        <p>
+                            Served and enjoy! 
+                        </p>
+                    </div>
+                </div>  
+            </article>
+        </section>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,36 @@
+<!-- prettier-ignore -->
+{% extends 'template.html' %}
+{% block title %} Flavours 101 {% endblock %}
+{% block h1_text %} Update Details: {% endblock %}
+{% load static %}
+{% block form_table_div %}
+
+<form name="myForm" method="POST" action="/flsys/editRating/updateRating/{{ ratePancake.id }}">
+	{% csrf_token %}
+
+	<div class="custom-info">
+		<fieldset class="input1">
+			<div>
+				<label for="rate_name">Name:</label>
+				<input type="text" name="rate_name" value="{{ ratePancake.rate_name }}">
+			</div>
+			<div>
+				<label for="recipe_name">Recipe Name:</label>
+				<input type="text" name="recipe_name" value="{{ ratePancake.recipe_name }}">
+			</div>
+			<div>
+				<label for="rating">Rating:</label>
+				<input type="number" name="rating" min="1" max="5" value="{{ ratePancake.rating }}">
+
+			</div>
+				<br>
+				<button type="submit" class="btn-next">Update</button>
+			</div>
+		</fieldset>
+	</div>
+</form>
+
+
+<br><br>
+
+{% endblock %}

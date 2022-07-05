@@ -1,0 +1,192 @@
+<!-- prettier-ignore -->
+{% extends 'template.html' %}
+{% block title %}Flavours 101{% endblock %}
+{% load static %}
+{% block form_table_div %}
+
+<script type="text/javascript">
+	function computeAlternatives(item) {
+	    var doc = document.getElementById('computation');
+	    doc.innerHTML = item;
+	    doc.style = "display:block";
+	}
+</script>
+
+<div class="goback">
+    <button class="goback-btn" type="button" onclick="location.href='/flsys/Mains/'">Go back</button>
+</div>
+
+<div>
+    <button class="rating-button" type="button" onclick="location.href='/flsys/RatePancake/'">Rate this Recipe</button>
+</div>
+
+<div class="page">
+    <div class="recipe-page">
+        <section class="single-recipe">
+            <img src="{% static 'img/Chicken.jpg' %}" class="img recipe-single-img" />
+            <article class="recipe-info">
+                <h1 class="single-label">Chicken Adobo</h1>
+                <p>
+                    This recipe is quick, simple, and easy. This is the simple adobo recipe you'll want to learn and master if you're a newbie cook. Chicken adobo is a Filipino dish made with chicken slices, marinated with soy sauce and seasonings, which are then pan-fried and simmered till soft. The dish gained popularity because of its delicious taste and ease of preparation.
+                </p>
+                <cite class="recipe-citation">From
+                    <a href="https://panlasangpinoy.com/filipino-chicken-adobo-recipe/">Panlasang Pinoy</a>
+                    by Vanjo Merano
+                </cite>
+                <div class="recipe-icons">
+                    <article>
+                        <i class="fa-solid fa-clock" style="color: #e30b5d; font-size: 25px"></i>
+                        <h5>Prep. Time</h5>
+                        <p>10 min.</p>
+                    </article>
+                    <article>
+                        <i class="fa fa-clock-o" aria-hidden="true" style="color: #e30b5d; font-size: 25px"></i>
+                        <h5>Cooking Time</h5>
+                        <p>40 min.</p>
+                    </article>
+                    <article>
+                        <i class="fa-solid fa-user-group" style="color: #e30b5d; font-size: 25px"></i>
+                        <h5>Serving</h5>
+                        <p>4 servings</p>
+                    </article>
+                </div>
+            </article>
+        </section>
+        <section class="recipe-content">
+            <article class="recipe-ingredient">
+                <div>
+                    <h4 class="single-label2">Ingredients</h4>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">2 lbs chicken cut into serving pieces</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">3 pieces dried bay leaves</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">8 tablespoons soy sauce</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">4 tablespoons white vinegar</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">5 cloves garlic crushed</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">1 teaspoon whole black pepper</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">1 1/2 cups water</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">3 tablespoons cooking oil</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">1 tablespoon sugar</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">2 pieces sliced potato (optional)</p>
+                    </div>
+                </div>
+            </article>
+            <article class="instruction-main">
+                <h4 class="single-label2">Instructions</h4>
+                <div class="instruction">
+                    <header>
+                        <p>step 1</p>
+                        <div></div>
+                    </header>
+                    <div class="ins-checkbox">
+                    <input type="checkbox">
+                        <p>
+                            In a large mixing bowl, combine the chicken, soy sauce, and garlic. Mix thoroughly. For at least 1 hour, marinate the chicken. The longer the duration, the better.
+                        </p>
+                    </div>
+                </div>
+                <div class="instruction">
+                    <header>
+                        <p>step 2</p>
+                        <div></div>
+                    </header>
+                    <div class="ins-checkbox">
+                    <input type="checkbox">
+                        <p>
+                            Heat a cooking pan. Pour cooking oil.
+                        </p>
+                    </div>
+                </div>
+                <div class="instruction">
+                    <header>
+                        <p>step 3</p>
+                        <div></div>
+                    </header>
+                    <div class="ins-checkbox">
+                    <input type="checkbox">
+                        <p>
+                            Allow the oil to heat up, pan-fry the marinated chicken for 2 minutes per side once the oil is heated enough.
+                        </p>
+                    </div>
+                </div>
+                <div class="instruction">
+                    <header>
+                        <p>step 4</p>
+                        <div></div>
+                    </header>
+                    <div class="ins-checkbox">
+                    <input type="checkbox">
+                        <p>
+                            Pour the remaining marinade, including the garlic, into the pan. Add the water. Bring the water to boil
+                        </p>
+                    </div>
+                </div>
+                <div class="instruction">
+                    <header>
+                        <p>step 5</p>
+                        <div></div>
+                    </header>
+                    <div class="ins-checkbox">
+                    <input type="checkbox">
+                        <p>
+                            Add dried bay leaves and whole black pepper. Simmer for 30 minutes or until the chicken is cooked through.
+                        </p>
+                    </div>
+                </div>
+                <div class="instruction">
+                    <header>
+                        <p>step 6</p>
+                        <div></div>
+                    </header>
+                    <div class="ins-checkbox">
+                    <input type="checkbox">
+                        <p>
+                            Add in the vinegar, let it simmer for 5 minutes. Then stir.
+                        </p>
+                    </div>
+                </div>
+                <div class="instruction">
+                    <header>
+                        <p>step 7</p>
+                        <div></div>
+                    </header>
+                    <div class="ins-checkbox">
+                    <input type="checkbox">
+                        <p>
+                            Add the sugar, stir and turn off the stove. Serve hot. Share and Enjoy!
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </div>
+</div>
+
+{% endblock %}

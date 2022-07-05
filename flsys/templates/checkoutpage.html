@@ -1,0 +1,116 @@
+<!-- prettier-ignore -->
+{% extends 'template.html' %}
+{% block title %} Flavours 101 {% endblock %}
+{% block h1_text %} Cooking Class Booking {% endblock %}
+{% load static %}
+{% block form_table_div %}
+
+<script>
+	function submitRadioButton()
+	{
+		var gen=document.forms["myForm"]["time"]
+	}
+</script>
+<script>
+	function confirm() {
+			var ch1 = document.myForm.cuisine;
+			
+			if (ch1.value == ""){
+					 alert("Please select your cuisine class");
+					 return false;
+			}
+
+		function prodA(){
+			document.getElementById('banktransfer').style.display = 'block';
+		}
+
+		function hideA2(){
+			document.getElementById('paypal').style.display = 'none';
+		}
+
+		function clearSelected(){
+	    var elements = document.getElementById("selection").options;
+	 
+	    for(var i = 0; i < elements.length; i++){
+	      if(elements[i].selected)
+	        elements[i].selected = false;
+    }
+
+</script>
+
+<table class="table-form">
+	<tr>
+		<th style="padding: 3px 10px; text-align: left;">Name</th>
+		<th style="padding: 3px 10px; text-align: left;">Phone Number</th>
+		<th style="padding: 3px 10px; text-align: left;">Email</th>
+		<th style="padding: 3px 10px; text-align: left;">Cuisine Class</th>
+		<th style="padding: 3px 10px; text-align: left;">Date</th>
+		<th style="padding: 3px 10px; text-align: left;">Time</th>
+		<th style="padding: 3px 10px; text-align: left;">Mode of Class</th>
+	</tr>
+	<hr>
+	<tr>
+		<td>{{cuiReg.firstname}} {{cuiReg.surname}}</td>
+		<td>{{cuiReg.number}}</td>
+		<td>{{cuiReg.email}}</td>
+		{%for item in cuiClass%}
+		<td>{{item.cuisine}}</td>
+		{% endfor %}
+		{%for sched in cuiSched%}
+		<td>{{sched.date}}</td>
+		<td>{{sched.time}}</td>
+		<td>{{sched.mode}}</td>
+		{% endfor %}
+	</tr>
+</table>
+<hr>
+<br>
+
+<div>
+	<img src="{% static 'img/cook1.jpg' %}" style="height: 280px; position: absolute; left: 10px; top: 320px;">
+</div>
+
+<form name="myForm" method="POST"> 
+	<div class="custom-info">
+		<div class="radio">
+			<fieldset class="input1">
+				<legend>4 Checkout</legend>
+					<label>Select Tickets: </label>
+					<input type="number" id="tickets" name="tickets" value="1 Tickets" min="1" max="10" onclick="prodA(); clearSelected(); hideA2();" required>
+					<br><br>
+					<label>Choose mode of payment: </label><br>
+					<input type="radio" size="30" id="banktransfer" value="Bank Transfer" name="payment" onclick="prodA(); clearSelected(); hideA2();" required>
+					<label>Bank Transfer</label>
+					<br>
+					<input type="radio" size="30" id="paypal" value="PayPal" name="payment" onclick="prodA(); clearSelected(); hideA2();" required>
+					<label>PayPal</label>
+					<br>
+					<input type="radio" size="30" id="dragonpay" value="DragonPay (Online Banking)" name="payment" onclick="prodA(); clearSelected(); hideA2();" required>
+					<label>Dragonpay (Online Banking)</label>
+					<br>
+					<input type="radio" size="30" id="card" value="Credit/Debit Card" name="payment" onclick="prodA(); clearSelected(); hideA2();" required>
+					<label>Credit/Debit Card</label>
+				<br><br><br>
+				<input class="btn-checkout" type="submit" id="btnProceed" value="Process Booking" name="">
+			</fieldset>
+		</div>
+	</div>
+	{% csrf_token %}
+</form>
+
+<div>
+	<img src="{% static 'img/cook3.jpg' %}" style="height: 280px; position: absolute; right: 10px; top: 320px;">
+</div>
+
+<div>
+	<table id="listTable">
+		{% for item in newReg.checkout_set.all %}
+		<tr>
+			<td>{{forloop.counter}}</td>
+			<td>{{item.regid}} - {{item.date}} {{item.time}} {{item.mode}}</td>
+		</tr>
+		{% endfor %}
+	</table>
+</div>
+
+{% endblock %}

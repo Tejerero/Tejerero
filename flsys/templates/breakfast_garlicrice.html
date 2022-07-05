@@ -1,0 +1,131 @@
+<!-- prettier-ignore -->
+{% extends 'template.html' %}
+{% block title %}Flavours 101{% endblock %}
+{% load static %}
+{% block form_table_div %}
+
+<div class="goback">
+    <button class="goback-btn" type="button" onclick="location.href='/flsys/Breakfast/'">Go back</button>
+</div>
+
+<div>
+    <button class="rating-button" type="button" onclick="location.href='/flsys/RatePancake/'">Rate this Recipe</button>
+</div>
+
+<div class="page">
+    <div class="recipe-page">
+        <section class="single-recipe">
+            <img src="{% static 'img/GarlicRice.jpg' %}" class="img recipe-single-img" />
+            <article class="recipe-info">
+                <h1 class="single-label">Garlic Fried Rice</h1>
+                <p>
+                    Many Filipino households prepare sinangag on a regular basis. It's the garlic fried rice served with fried egg, sausages, daing na bangus, and other breakfast dishes. While the most basic version consists of toasted garlic tossed in day-old rice, <cite>Yummy.ph</cite> have discovered a better way to prepare garlic fried rice. It all depends on how the garlic is cooked.
+                </p>
+                <cite class="recipe-citation">From
+                    <a href="https://www.yummy.ph/lessons/prepping/how-to-make-flavored-garlic-oil-for-sinangag-a00249-20210424">Yummy.ph</a>
+                    by Roselle Miranda, April 24, 2021
+                </cite>
+                <div class="recipe-icons">
+                    <article>
+                        <i class="fa-solid fa-clock" style="color: #e30b5d; font-size: 25px"></i>
+                        <h5>Prep. Time</h5>
+                        <p>10 min.</p>
+                    </article>
+                    <article>
+                        <i class="fa fa-clock-o" aria-hidden="true" style="color: #e30b5d; font-size: 25px"></i>
+                        <h5>Cooking Time</h5>
+                        <p>10 min.</p>
+                    </article>
+                        <i class="fa-solid fa-user-group" style="color: #e30b5d; font-size: 25px"></i>
+                        <h5>Serving</h5>
+                        <p>4 servings</p>
+                    </article>
+                </div>
+            </article>
+        </section>
+        <section class="recipe-content">
+            <article class="recipe-ingredient">
+                <div>
+                    <h4 class="single-label2">Ingredients</h4>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">2 tablespoon oil</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">4 cloves of garlic (diced or smashed)</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">4 cups of day old rice</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">salt to taste</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">pepper to taste</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">chopped spring onion (Optional)</p>
+                    </div>
+                </div>
+            </article>
+            <article class="instruction-main">
+                <h4 class="single-label2">Instructions</h4>
+                <div class="instruction">
+                    <header>
+                        <p>step 1</p>
+                        <div></div>
+                    </header>
+                    <div class="ins-checkbox">
+                    <input type="checkbox">
+                        <p>
+                            Place your pot or large saute pan on the stove. In a cold oil, add roughly 2 tablespoons oil and 4 garlic cloves, diced or smashed.
+                        </p>
+                    </div>
+                </div>
+                <div class="instruction">
+                    <header>
+                        <p>step 2</p>
+                        <div></div>
+                    </header>
+                    <div class="ins-checkbox">
+                    <input type="checkbox">
+                        <p>
+                            Turn on the heat and set it to Low.
+                        </p>
+                    </div>
+                </div>
+                <div class="instruction">
+                    <header>
+                        <p>step 3</p>
+                        <div></div>
+                    </header>
+                    <div class="ins-checkbox">
+                    <input type="checkbox">
+                        <p>
+                            Allow the oil to heat up, then add the garlic and sauté until it is golden brown in color.
+                        </p>
+                    </div>
+                </div>
+                <div class="instruction">
+                    <header>
+                        <p>step 4</p>
+                        <div></div>
+                    </header>
+                    <div class="ins-checkbox">
+                    <input type="checkbox">
+                        <p>
+                            Add the 4 cups of day-old rice to the pot. Season with salt and pepper to taste, garnish it with chopped spring onions and serve while hot.
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </div>
+</div>
+
+{% endblock %}

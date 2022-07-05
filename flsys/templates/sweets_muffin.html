@@ -1,0 +1,168 @@
+<!-- prettier-ignore -->
+{% extends 'template.html' %}
+{% block title %}Flavours 101{% endblock %}
+{% load static %}
+{% block form_table_div %}
+
+<div class="goback">
+    <button class="goback-btn" type="button" onclick="location.href='/flsys/Sweets/'">Go back</button>
+</div>
+
+<div>
+    <button class="rating-button" type="button" onclick="location.href='/flsys/RatePancake/'">Rate this Recipe</button>
+</div>
+
+<div class="page">
+    <div class="recipe-page">
+        <section class="single-recipe">
+            <img src="{% static 'img/muffin.jpg' %}" class="img recipe-single-img" />
+            <article class="recipe-info">
+                <h1 class="single-label">Banana Chocolate Chip Muffins</h1>
+                <p>
+                    These banana chocolate chip muffins are fluffy, delicious and perfect for kids snacks. This recipe will help you how to use up your never-ending stocks of overripe bananas. These muffins are golden, moist and bursting with banana flavor. They are perfect for breakfast, snack or dessert.
+                </p>
+                <cite class="recipe-citation">From
+                    <a href="https://www.thetasteofkosher.com/moist-banana-chocolate-chip-muffins/">The Taste of Kosher</a>
+                    by Elissabeth
+                </cite>
+                <div class="recipe-icons">
+                    <article>
+                        <i class="fa-solid fa-clock" style="color: #e30b5d; font-size: 25px"></i>
+                        <h5>Prep. Time</h5>
+                        <p>10 min.</p>
+                    </article>
+                    <article>
+                        <i class="fa fa-clock-o" aria-hidden="true" style="color: #e30b5d; font-size: 25px"></i>
+                        <h5>Cooking Time</h5>
+                        <p>20 min.</p>
+                    </article>
+                    <article>
+                        <i class="fa-solid fa-user-group" style="color: #e30b5d; font-size: 25px"></i>
+                        <h5>Serving</h5>
+                        <p>12 Muffins</p>
+                    </article>
+                </div>
+            </article>
+        </section>
+        <section class="recipe-content">
+            <article class="recipe-ingredient">
+                <div>
+                    <h4 class="single-label2">Ingredients</h4>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">1 1/2 cups all-purpose flour (190 grams)</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">1 cup white sugar (200 grams)</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">1 teaspoon baking soda</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">1/2 teaspoon salt</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">3 medium bananas, mashed</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">1 egg</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">1/2 cup oil (120 milliliters)</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">1 teaspoon vanilla</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">1 cup semisweet chocolate chips (175 grams), plus more for sprinkling</p>
+                    </div>
+                </div>  
+            </article>
+            <article class="instruction-main">
+                <h4 class="single-label2">Instructions</h4>
+                <div class="instruction">
+                    <header>
+                        <p>step 1</p>
+                        <div></div>
+                    </header>
+                    <div class="ins-checkbox">
+                    <input type="checkbox">
+                        <p>
+                            Preheat the oven to 350°F or 175°C.
+                        </p>
+                    </div>
+                </div>
+                <div class="instruction">
+                    <header>
+                        <p>step 2</p>
+                        <div></div>
+                    </header>
+                    <div class="ins-checkbox">
+                    <input type="checkbox">
+                        <p>
+                            In a mixing bowl, combine flour, sugar, baking soda, and salt.
+                        </p>
+                    </div>
+                </div>
+                <div class="instruction">
+                    <header>
+                        <p>step 3</p>
+                        <div></div>
+                    </header>
+                    <div class="ins-checkbox">
+                    <input type="checkbox">
+                        <p>
+                            Add the mashed bananas, egg, oil, and vanilla extract. Mix until everything is well combined. Then add the chocolate chips. Using a baking spatula mix until they are evenly distributed.
+                        </p>
+                    </div>
+                </div>
+                <div class="instruction">
+                    <header>
+                        <p>step 4</p>
+                        <div></div>
+                    </header>
+                    <div class="ins-checkbox">
+                    <input type="checkbox">
+                        <p>
+                            Spoon the batter into paper-lined standard 12-cup muffin tin. Sprinkle additional chocolate chips on each muffin cup.
+                        </p>
+                    </div>
+                </div>
+                <div class="instruction">
+                    <header>
+                        <p>step 5</p>
+                        <div></div>
+                    </header>
+                    <div class="ins-checkbox">
+                    <input type="checkbox">
+                        <p>
+                            Bake for 15 to 25 minutes* or until a toothpick inserted in the center comes out clean.
+                        </p>
+                    </div>
+                </div>
+                <div class="instruction">
+                    <header>
+                        <p>step 6</p>
+                        <div></div>
+                    </header>
+                    <div class="ins-checkbox">
+                    <input type="checkbox">
+                        <p>
+                            Remove from the oven and set aside to cool for 5 minutes before transferring to a cooling rack.
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </div>
+</div>
+
+{% endblock %}

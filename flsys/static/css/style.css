@@ -1,0 +1,1104 @@
+body{
+    background-image: url('/static/img/bg.svg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    overflow-x: hidden;}
+h2 {
+    background-color: pink;
+    font-family: calibri;
+    font-size: 20px;
+    text-align: right;
+}
+
+.nav a {
+    padding: 15px;
+    color: black;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    color: #e30b5d;
+}
+
+.input{
+    width: 100px;
+    display: grid;
+}
+.custom-info.input-box {
+    display: flex;
+    align-items: center;
+}
+.title {
+    text-align: center;
+}
+fieldset {
+  background-color: #eeeeee;
+  border: 2px groove;
+  padding: 10px 20px;
+}
+legend {
+  background-color: gray;
+  color: white;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+input {
+  margin: 5px;
+}
+.custom-info {
+    display: flex;
+    justify-content: center;
+}
+.btn-next {
+    float: right;
+    background-color: #DE3163;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;padding: 5px 15px;
+    cursor: pointer;
+
+}
+
+.share {
+    position: absolute;
+    top: 7%;
+    right: 23%;
+}
+
+.share img {
+    width: 32px;
+    height: 32px;
+    margin: 7px;
+    padding: 0px 5px;
+}
+
+.share a {
+    text-decoration: none;
+}
+
+.share img:hover {
+    opacity: .4;
+}
+
+.btn-form {
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 5px;
+    position: absolute;
+    top: 8%;
+    left: 78%;
+    padding: 5px 15px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.8s;
+    color: #fff;
+}
+
+.btn-form:hover {
+    color: #e30b5d;
+}
+
+.btn-form:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #e30b5d;
+    z-index: -1;
+    transition: 0.8s;
+    top: 0;
+    border-radius: 100% 100% 1 1;
+}
+
+.btn-form:hover::before {
+    height: 0%;
+}
+
+.goback-btn {
+    position: absolute;
+    top: 20%;
+    left: 1%;
+}
+
+.goback-btn {
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 3px 12px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.goback-btn:hover {
+    background-color: #e30b5d;
+    color: #fff;
+}
+
+.goback a {
+    color: black;
+}
+
+.goback a:hover {
+    color: #e30b5d;
+}
+/*table, tr, th, td{
+    border: 2px solid;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+td {
+    padding: 5px 5px;
+    background: #F2D2BD;
+}
+th {
+    background: #DE3163;
+    padding: 3px 10px;*/
+}
+/*listpage---------------------------------------------------------------------*/
+.input1{
+    width: 50rem;
+    display: block;
+}
+.custom-info1{
+    display: flex;
+    align-items: center;
+}
+.custom-info1 {
+    display: grid;
+    justify-content: center;
+}
+.btn-listpage {
+    padding: 5px 15px;
+    cursor: pointer;
+}
+.btn-listpage {
+    float: right;
+    background-color: #DE3163;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.prev-Cancel:hover {
+    color: #fff;
+    background-color: #e30b5d;
+    cursor: pointer;
+}
+
+.radio input[type=radio] {
+    margin: 0;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.radio input:checked+p {
+    color: #E30B5C;
+}
+
+.radio p {
+    display: initial;
+    padding: 8px;
+    margin-top: 5px;
+    font-size: 17px;
+    line-height: 35px;
+}
+
+.radio input:checked {
+    font-weight: bold;
+}
+
+/*sched-------------------------------------------*/
+.input2{
+    width: 20rem;
+    display: block;
+}
+.custom-info2{
+    display: flex;
+    align-items: center;
+}
+.custom-info2 {
+    display: flex;
+    justify-content: center;
+}
+.btn-Proceed {
+    padding: 5px 6rem;
+    cursor: pointer;
+}
+.btn-Proceed {
+    float: center;
+    background-color: #DE3163;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/*checkout-------------------------------------------*/
+
+.btn-checkout {
+    padding: 8px 25px;
+    cursor: pointer;
+}
+.btn-checkout {
+    float: right;
+    background-color: #DE3163;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+.btn-checkout:hover {
+    opacity: .8;
+    cursor: pointer;
+}
+.btn-Cancel{
+    text-decoration: none;
+    float:right; 
+    border-radius: inherit; 
+    padding: 8px 25px;
+    cursor: pointer;
+}
+.btn-Cancel{
+    color: black;
+    background-color: lightgray;
+}
+.btn-Cancel:hover {
+    background-color: lightpink;
+    cursor: pointer;
+}
+
+
+/*Contact---------------------------------------------------------------------- */
+
+.contact-div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: calibri;
+}
+
+.contact-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form {
+    max-width: 700px;
+    margin-right: 50px;
+}
+
+.contact-info,
+.contact-form {
+    flex: 1;
+}
+
+.contact-form h1 {
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #e30b5d;
+}
+
+.contact-form .text-box {
+    background: #ffbcd9;
+    color: #080808;
+    border: none;
+    width: calc(50% - 10px);
+    height: 20px;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 1.0);
+    margin-bottom: 10px;
+    opacity: 0.9;
+    width: 100%;
+}
+
+.contact-form .text-box:first-child {
+    margin-right: 15px;
+}
+
+.contact-form textarea {
+    background: #ffbcd9;
+    color: #080808;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    min-height: 200px;
+    max-height: 400px;
+    resize: vertical;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 1.0);
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.contact-form .send-btn {
+    float: right;
+    background: #c72c48;
+    color: #fff;
+    border: none;
+    width: 120px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    transition-property: background;
+}
+
+.contact-form .send-btn:hover {
+    background: #e3256b;
+}
+
+.contact-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-info {
+    max-width: 500px;
+    line-height: 65px;
+    padding-left: 50px;
+    font-size: 25px;
+}
+
+.contact-info img {
+    margin-right: 20px;
+    width: 35px;
+    height: 35px;
+}
+
+.contact-form h1 {
+    text-align: center;
+    font-family: calibri;
+    font-size: 30px;
+    color: #E30B5C;
+    line-height: 1;
+}
+
+/*Hompage---------------------------------------------------------------------- */
+
+.recipes {
+    font-size: 25px;
+    font-family: impact;
+}
+
+.recipes a {
+    color: black;
+    text-decoration: none;
+}
+
+.recipes a:hover {
+    color: #e30b5d;
+}
+
+.recipes {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.recipes img {
+    width: 260px;
+    height: 180px;
+}
+
+.recipes img:hover {
+    box-shadow: 5px 5px 20px 5px #301728FF;
+    transform: translateX(5px);
+}
+
+figcaption {
+    text-align: center;
+    background-color: pink;
+}
+
+.table-form {
+    border-collapse: collapse;
+    padding: 5px 5px;
+    font-size: 0.9em;
+    min-width: 100px;
+}
+.table-form th {
+    text-align: left;
+    font-weight: bold;
+}
+.table-form th,
+.table-form td {
+    padding: 12px 15px;
+}
+
+
+/*table, tr, th, td{
+    border: 2px solid;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+td {
+    padding: 5px 5px;
+    background: #F2D2BD;
+}
+th {
+    background: #DE3163;
+    padding: 3px 10px;*/
+}
+
+/*transactPage-------------------------------------------*/
+.summary-table {
+    padding: 5px 5px;
+    font-size: 0.9em;
+    min-width: 100px;
+}
+.summary-table {
+    display: flex;
+    align-items: center;
+}
+.summary-table{
+    border-collapse: collapse;
+    padding: 5px 5px;
+    font-size: 0.9em;
+    min-width: 100px;
+}
+.summary-table th {
+    text-align: left;
+    font-weight: bold;
+    background-color: #DE3163;
+    color: #fff;
+}
+.summary-table th,
+.summary-table td {
+    padding: 12px 15px;
+}
+
+.summary-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.summary-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.summary-table tbody tr:last-of-type {
+    border-bottom: 2px solid #DE3163;
+}
+
+/*Recipes-------------------------------------------------------------------------- */
+
+.recipe-label2 {
+    text-align: center;
+    font-family: calibri;
+    font-size: 50px;
+    color: #E30B5C;
+}
+
+.sweets-caption {
+    font-size: 20px;
+    font-family: impact;
+    color: #E30B5C;
+}
+
+.sweets-caption {
+    text-decoration: none;
+    color: black;
+}
+
+.sweets-caption a:hover {
+    color: #e30b5d;
+}
+
+
+/*Single Recipes---------------------------------------------------------------------- */
+
+.single-label {
+    text-align: center;
+    font-family: calibri;
+    font-size: 40px;
+    color: #E30B5C;
+}
+
+.single-label2 {
+    font-size: 17px;
+}
+
+.page {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: calibri;
+}
+
+.single-recipe {
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+.recipe-single-img {
+    height: 300px;
+    float: left;
+    padding: 30px;
+}
+
+.recipe-info p {
+    font-size: 18px;
+}
+
+.recipe-icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 32px 0;
+    text-align: center;
+}
+
+.recipe-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+.recipe-icons h5,
+.recipe-icons p {
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.recipe-icons p {
+    color: #E30B5C;
+}
+
+.recipe-content {
+    padding: 48 3;
+    display: grid;
+    grid-column-gap: 112px;
+}
+
+.recipe-content {
+    width: 100%;
+    display: flex;
+    margin: auto;
+}
+
+.recipe-ingredient {
+    display: grid;
+    row-gap: 32px;
+    width: 40%;
+    float: left;
+}
+
+.recipe-ingredient p {
+    font-size: 20px;
+}
+
+.recipe-ingredient .ing-checkbox {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #cbd5e1;
+}
+
+.recipe-content input[type=checkbox] {
+    margin: 20px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.instruction input[type=checkbox] {
+    position: absolute;
+    margin: 0;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.ing-checkbox input:checked+p {
+    color: #fff;
+    font-weight: bold;
+}
+
+.ing-checkbox input:checked+p {
+    background-color: #E30B5C;
+    opacity: 80%;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.ins-checkbox input:checked+p {
+    color: #fff;
+    font-weight: bold;
+}
+
+.ins-checkbox input:checked+p {
+    background-color: #E30B5C;
+    opacity: 80%;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.instruction-main {
+    float: right;
+    width: 50%;
+}
+
+.instruction header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+    align-items: center;
+}
+
+.instruction .ing-checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.instruction header p {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #E30B5C;
+    margin-bottom: 0;
+    right: 10px;
+    font-size: 18px;
+}
+
+.instruction p {
+    font-size: 18px;
+}
+
+.instruction .ins-checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.ins-checkbox p {
+    display: flex;
+    margin: 30px;
+    font-size: 18px;
+}
+
+.instruction header div {
+    height: 2px;
+    background: #cbd5e1;
+}
+
+.recipe-citation a {
+    color: #E30B5C;
+}
+
+.recipe-citation a:hover {
+    color: darkred;
+}
+
+/* recipe.html---------------------------------------------------------------------- */
+
+.recipe-label {
+    text-align: center;
+    font-family: calibri;
+    font-size: 35px;
+    color: #E30B5C;
+    line-height: 1;
+}
+
+.tagline {
+    text-align: center;
+    color: #E30B5C;
+}
+
+.p1 {
+    font-family: calibri;
+    font-size: 17px;
+}
+
+/*Single Recipes---------------------------------------------------------------------- */
+
+.single-label {
+    text-align: center;
+    font-family: calibri;
+    font-size: 30px;
+    color: #E30B5C;
+}
+
+.single-label2 {
+    font-size: 20px;
+}
+
+.page {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: calibri;
+}
+
+.single-recipe {
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+.recipe-single-img {
+    height: 300px;
+    float: left;
+    padding: 30px;
+}
+
+.recipe-info p {
+    font-size: 17px;
+}
+
+.recipe-icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 32px 0;
+    text-align: center;
+}
+
+.recipe-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+.recipe-icons h5,
+.recipe-icons p {
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.recipe-icons p {
+    color: #E30B5C;
+}
+
+.recipe-content {
+    padding: 48 3;
+    display: grid;
+    grid-column-gap: 112px;
+}
+
+.recipe-content {
+    width: 100%;
+    display: flex;
+    margin: auto;
+}
+
+.recipe-ingredient {
+    display: grid;
+    row-gap: 32px;
+    width: 40%;
+    float: left;
+}
+
+.recipe-ingredient p {
+    font-size: 20px;
+}
+
+.recipe-ingredient .ing-checkbox {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #cbd5e1;
+}
+
+.recipe-content input[type=checkbox] {
+    margin: 20px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.instruction input[type=checkbox] {
+    position: absolute;
+    margin: 0;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.ing-checkbox input:checked+p {
+    color: #fff;
+    font-weight: bold;
+}
+
+.ing-checkbox input:checked+p {
+    background-color: #E30B5C;
+    opacity: 80%;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.ins-checkbox input:checked+p {
+    color: #fff;
+    font-weight: bold;
+}
+
+.ins-checkbox input:checked+p {
+    background-color: #E30B5C;
+    opacity: 80%;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.instruction-main {
+    float: right;
+    width: 50%;
+}
+
+.instruction header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+    align-items: center;
+}
+
+.instruction .ing-checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.instruction header p {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #E30B5C;
+    margin-bottom: 0;
+    right: 10px;
+    font-size: 18px;
+}
+
+.instruction p {
+    font-size: 18px;
+}
+
+.instruction .ins-checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.ins-checkbox p {
+    display: flex;
+    margin: 30px;
+    font-size: 18px;
+}
+
+.instruction header div {
+    height: 2px;
+    background: #cbd5e1;
+}
+
+.recipe-citation a {
+    color: #E30B5C;
+}
+
+.recipe-citation a:hover {
+    color: darkred;
+}
+
+/*rating---------------------------------------------------------------------- */
+
+.rating {
+    position: absolute;
+    top: 365px;
+    left: 30%;
+    right: 10%;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%) rotateY(180deg);
+    display: flex;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    display: block;
+    cursor: pointer;
+    width: 50px;
+    background: none;
+}
+
+.rating label:before {
+    content: '\f005';
+    font-family: fontAwesome;
+    position: relative;
+    display: block;
+    font-size: 25px;
+    color: #353839;
+}
+
+.rating label:after {
+    content: '\f005';
+    font-family: fontAwesome;
+    position: absolute;
+    display: block;
+    font-size: 25px;
+    color: yellow;
+    top: 0;
+    opacity: 0;
+    transition: .2s;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+}
+
+.rating label:hover:after,
+.rating label:hover~label:after,
+.rating input:checked~label:after {
+    opacity: 1;
+}
+
+.rate-description p {
+    position: absolute;
+    top: 340px;
+    left: 10%;
+}
+
+#rating-value {
+    position: absolute;
+    top: 350px;
+    left: 26%;
+    font-family: sans-serif;
+    width: 110px;
+    margin: 40px auto 0;
+    padding: 10px 5px;
+    text-align: center;
+    box-shadow: inset 0 0 2px 1px #e30b5d;
+}
+.rating-submit {
+    position: absolute;
+    top: 450px;
+    left: 420px;
+}
+.rating-submit {
+    padding: 5px 10px;
+    background-color: #DE3163;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.rating-button {
+    position: absolute;
+    top: 490px;
+    left: 200px;
+}
+.rating-button {
+    padding: 5px 10px;
+    background-color: #DE3163;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.rating-table {
+    padding: 5px 5px;
+    font-size: 0.9em;
+    min-width: 100px;
+}
+.rating-table {
+    display: flex;
+    align-items: center;rating
+}
+.rating-table{
+    border-collapse: collapse;
+    padding: 5px 5px;
+    font-size: 0.8em;
+    min-width: 100px;
+}
+.rating-table th {
+    text-align: left;
+    font-weight: bold;
+    background-color: #DE3163;
+    color: #fff;
+}
+.rating-table th,
+.rating-table td {
+    padding: 12px 15px;
+}
+
+.rating-table tbody tr {
+    background-color: #fff;
+    border-bottom: 1px solid #dddddd;
+}
+
+.rating-table tbody tr:last-of-type {
+    border-bottom: 2px solid #DE3163;
+}
+
+.COMPUTE {
+    display: inline;
+    clear: both;
+}
+
+.COMPUTE #computation {
+    display: none;
+    top: -70px;
+    left: 100px;
+    background-color: white;
+    padding: 10px;
+    width: 400px;
+    text-align: center;
+    justify-content: center;
+    border-color: black;
+    border-width: 5px;
+    border-style: solid;
+}
+
+p#pT,
+p#cT,
+p#servingsCount {
+    border-width: thick;
+    margin: 14px 60px 0px 60px;
+    padding: 5px;
+    border-radius: 30px;
+    border: 1px solid #000;
+    background-color: white;
+}
+
+.ing-checkbox input[type=checkbox]:checked+p+.alternatives {
+    display: inline-flex;
+    clear: both;
+}
+
+input[type=checkbox] {
+    min-width: 20px;
+}
+
+.alternatives {
+    display: none;
+    clear: both;
+}
+
+.alter {
+    margin: 10px 5px 10px 5px;
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.alter:active {
+    color: black;
+    background-color: green;
+    border-radius: 10px;
+}
+
+h4 {
+    width: 100px;
+}

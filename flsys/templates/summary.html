@@ -1,0 +1,34 @@
+<!-- prettier-ignore -->
+{% extends 'template.html' %}
+{% block title %} Flavours 101 {% endblock %}
+{% block h1_text %} Scheduled Classes {% endblock %}
+{% load static %}
+{% block form_table_div %}
+
+<table class="summary-table">
+	<tr>
+		<th style="padding: 3px 10px; text-align: left;">ID</th>
+		<th style="padding: 3px 10px; text-align: left;">Name</th>
+		<th style="padding: 3px 10px; text-align: left;">Cuisine</th>
+		<th style="padding: 3px 10px; text-align: left;">Date</th>
+		<th style="padding: 3px 10px; text-align: left;">Time</th>
+		<th style="padding: 3px 10px; text-align: left;">Mode of Class</th>
+	</tr>
+	<hr>
+	{% for item in transactSum %}
+	<tr>
+		<td>{{forloop.counter}}.</td>
+		<td>{{item.firstname}} {{item.surname}}</td>
+		<td>{{item.cuisine}}</td>
+		<td>{{item.date}}</td>
+		<td>{{item.time}}</td>
+		<td>{{item.mode}}</td>
+		<td>Pending</td>
+	</tr>
+	{% endfor %}
+</table>
+<br>
+
+<br><br>
+
+{% endblock %}

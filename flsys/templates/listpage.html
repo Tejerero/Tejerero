@@ -1,0 +1,126 @@
+<!-- prettier-ignore -->
+{% extends 'template.html' %}
+{% block title %} Flavours 101 {% endblock %}
+{% block h1_text %} Cooking Class Booking {% endblock %}
+{% load static %}
+{% block form_table_div %}
+
+<script>
+	function submitRadioButton()
+	{
+		var gen=document.forms["myForm"]["time"]
+	}
+</script>
+<script>
+	function confirm() {
+			var ch1 = document.myForm.cuisine;
+			
+			if (ch1.value == ""){
+					 alert("Please select your cuisine class");
+					 return false;
+			}
+
+		function prodA(){
+			document.getElementById('baking').style.display = 'block';
+		}
+
+		function hideA2(){
+			document.getElementById('pastry').style.display = 'none';
+		}
+
+		function clearSelected(){
+	    var elements = document.getElementById("selection").options;
+	 
+	    for(var i = 0; i < elements.length; i++){
+	      if(elements[i].selected)
+	        elements[i].selected = false;
+    }
+
+</script>
+<script type="text/javascript">
+	function myFunction() {
+		let cuisine = document.forms[0]
+		let txt = "";
+		let i;
+
+		for (i=0; i < cuisine.length; i++){
+			if (cuisine[i].checked) {
+				txt = txt + cuisine[i].value + "";
+			}
+		}
+		document.getElementById("results").value =  txt;
+	}
+</script>
+
+<table class="table-form">
+	<tr>
+		<th style="padding: 3px 10px; text-align: left;">Name</th>
+		<th style="padding: 3px 10px; text-align: left;">Phone Number</th>
+		<th style="padding: 3px 10px; text-align: left;">Email</th>
+	</tr>
+	<hr>
+	<tr>
+		<td>{{cuiReg.firstname}} {{cuiReg.surname}}</td>
+		<td>{{cuiReg.number}}</td>
+		<td>{{cuiReg.email}}</td>
+	</tr>
+</table>
+<hr>
+<br>
+<form name="myForm" method="POST"> 
+	<div class="custom-info1">
+		<div class="radio">
+			<fieldset class="input1">
+				<legend>2 Choose your desired Class:</legend>
+                    <input type="radio" id="baking" value="Baking" name="cuisine" onclick="prodA(); clearSelected(); hideA2();" required>
+                    <p>Baking</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" id="pastry" value="Pastry" name="cuisine" onclick="prodA(); clearSelected(); hideA2();" required>
+                    <p>Pastry</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" id="bread" value="Bread Making" name="cuisine" onclick="prodA(); clearSelected(); hideA2();" required>
+                    <p>Bread Making</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" id="pasta" value="Pasta Making" name="cuisine" onclick="prodA(); clearSelected(); hideA2();" required>
+                    <p>Pasta Making</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" id="vegetarian" value="Vegetarian" name="cuisine" onclick="prodA(); clearSelected(); hideA2();" required>
+                    <p>Vegetarian</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" id="gluten" value="Gluten free" name="cuisine" onclick="prodA(); clearSelected(); hideA2();" required>
+                    <p>Gluten free</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" id="asian" value="Asian Cuisine" name="cuisine" onclick="prodA(); clearSelected(); hideA2();" required>
+                    <p>Asian Cuisine</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" id="italian" value="Italian Cuisine" name="cuisine" onclick="prodA(); clearSelected(); hideA2();" required>
+                    <p>Italian Cuisine</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" id="french" value="French Cuisine" name="cuisine" onclick="prodA(); clearSelected(); hideA2();" required>
+                    <p>French Cuisine</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" id="korean" value="Korean Cuisine" name="cuisine" onclick="prodA(); clearSelected(); hideA2();" required>
+                    <p>Korean Cuisine</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" id="indian" value="Indian Cuisine" name="cuisine" onclick="prodA(); clearSelected(); hideA2();" required>
+                    <p>Indian Cuisine</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" id="japanese" value="Japanese Cuisine" name="cuisine" onclick="prodA(); clearSelected(); hideA2();" required>
+                    <p>Japanese Cuisine</p>
+				<br><br>
+				<label>Your selected cuisine will display here: </label>
+				<input type="text" placeholder="Cuisine. " id="results" size="50" style="height: 30px; font-size: 17px;" disabled>
+
+				<input class="btn-listpage" type="submit" id="btnContinue" value="Continue">
+				<input class="btn-listpage" type="button" onclick="myFunction()" id="btnAdd" value="Add" name="">
+			</fieldset>
+		</div>
+	</div>
+	{% csrf_token %}
+</form>
+
+<br>
+
+<div>
+	<table id="listTable">
+		<tr>
+			<th style="padding: 3px 10px; text-align: left;"></th>
+		</tr>
+		{% for item in cuiReg.cookclass_set.all %}
+		<tr>
+			<td>{{item.cuisine}}</td>
+		</tr>
+		{% endfor %}
+	</table>
+</div>
+
+{% endblock %}

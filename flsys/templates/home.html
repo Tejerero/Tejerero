@@ -1,0 +1,38 @@
+<!-- prettier-ignore -->
+{% extends 'template.html' %}
+{% block title %}Flavours 101{% endblock %}
+{% load static %}
+{% block form_table_div %}
+
+<div align="center">
+  	<img src="{% static 'img/main.png' %}" alt="Flavours101" style="width: 50rem;" />
+</div>
+<br />
+<div class="recipes">
+	<section>
+		<a href="/flsys/Breakfast/" >
+    		<img src="{% static 'img/Breakfast.jpg' %}" alt="Unsplash"/>
+    		<figcaption>Breakfast</figcaption>
+  		</a>
+	</section>
+	<section>
+		<a href="/flsys/Mains/">
+    		<img src="{% static 'img/pinakbet.jpg' %}" alt="flavours101"/>
+    		<figcaption>Mains</figcaption>
+  		</a>
+	</section>
+	<section>
+		<a href="/flsys/Sweets/" >
+    		<img src="{% static 'img/muffin.jpg' %}" alt="flavours101"/>
+    		<figcaption>Sweets</figcaption>
+  		</a>
+	</section>
+	<section>
+		<a href="/flsys/Healthy/" >
+    		<img src="{% static 'img/sandwich.jpg' %}" alt="Unsplash"/>
+    		<figcaption>Healthy</figcaption>
+  		</a>
+	</section>
+</div>
+
+{% endblock %}

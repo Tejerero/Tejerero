@@ -1,0 +1,144 @@
+<!-- prettier-ignore -->
+{% extends 'template.html' %}
+{% block title %}Flavours 101{% endblock %}
+{% load static %}
+{% block form_table_div %}
+
+<script type="text/javascript">
+	function computeAlternatives(item) {
+	    var doc = document.getElementById('computation');
+	    doc.innerHTML = item;
+	    doc.style = "display:block";
+	}
+</script>
+
+<div class="goback">
+    <button class="goback-btn" type="button" onclick="location.href='/flsys/Breakfast/'">Go back</button>
+</div>
+
+<div>
+    <button class="rating-button" type="button" onclick="location.href='/flsys/RatePancake/'">Rate this Recipe</button>
+</div>
+
+<div class="page">
+    <div class="recipe-page">
+        <section class="single-recipe">
+            <img src="{% static 'img/toast.jpg' %}" class="img recipe-single-img" />
+            <article class="recipe-info">
+                <h1 class="single-label">Classic French Toast</h1>
+                <p>
+                    French toast will never go out of style as a breakfast favourite. It reigns supreme among morning carbs, with its crispy, golden crust and creamy, fluffy interior. It's breakfast at its finest, with powdered sugar, maple syrup drizzled on top, and fresh fruit!
+                </p>
+                <cite class="recipe-citation">From
+                    <a href="https://www.allrecipes.com/recipe/7016/french-toast-i/">allrecipes</a>
+                    by Jan Bittner
+                </cite>
+                <div class="recipe-icons">
+                    <article>
+                        <i class="fa-solid fa-clock" style="color: #e30b5d; font-size: 25px"></i>
+                        <h5>Prep. Time</h5>
+                        <p>10 min.</p>
+                    </article>
+                    <article>
+                        <i class="fa fa-clock-o" aria-hidden="true" style="color: #e30b5d; font-size: 25px"></i>
+                        <h5>Cooking Time</h5>
+                        <p>10 min.</p>
+                    </article>
+                    <article>
+                        <i class="fa-solid fa-user-group" style="color: #e30b5d; font-size: 25px"></i>
+                        <h5>Serving</h5>
+                        <p>2-3 servings</p>
+                    </article>
+                </div>
+            </article>
+        </section>
+        <section class="recipe-content">
+            <article class="recipe-ingredient">
+                <div>
+                    <h4 class="single-label2">Ingredients</h4>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">2 large eggs</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">1/4 cup heavy cream</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">1 teaspoon vanilla extract</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">1/2 cup milk</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">1 1/2 tablespoons sugar</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">6-9 pieces of white bread</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">3 tablespoons butter</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">Semi-sweet chocolate chips (Optional)</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">Sliced fresh fruits for toppings</p>
+                    </div>
+                    <div class="ing-checkbox">
+                        <input type="checkbox">
+                        <p class="ingredient">confectioner's sugar, sifted, to dust</p>
+                    </div>
+                </div>
+            </article>
+            <article class="instruction-main">
+                <h4 class="single-label2">Instructions</h4>
+                <div class="instruction">
+                    <header>
+                        <p>step 1</p>
+                        <div></div>
+                    </header>
+                    <div class="ins-checkbox">
+                    <input type="checkbox">
+                        <p>
+                            In a small bowl, whisk together the eggs, vanilla, cream, milk, and sugar. Soak the bread for 30 seconds to 1 minute per side in milk mixture.
+                        </p>
+                    </div>
+                </div>
+                <div class="instruction">
+                    <header>
+                        <p>step 2</p>
+                        <div></div>
+                    </header>
+                    <div class="ins-checkbox">
+                    <input type="checkbox">
+                        <p>
+                            In a large frying pan, melt 1½ tablespoons butter over medium heat. Add bread and sprinkle the top with chocolate chips (optional) cook for 1 to 2 minutes. Add the remaining butter to pan and flip the bread, cook for 1 to 2 more minutes or until golden brown.
+                        </p>
+                    </div>
+                </div>
+                <div class="instruction">
+                    <header>
+                        <p>step 3</p>
+                        <div></div>
+                    </header>
+                    <div class="ins-checkbox">
+                    <input type="checkbox">
+                        <p>
+                            On a serving platter, arrange the french toast in your preference. Top with any fresh fruits. Sprinkle with confectioners' sugar and drizzle with maple or pancake syrup. Serve while hot.
+                        </p>
+                    </div>
+                </div>  
+            </article>
+        </section>
+    </div>
+</div>
+
+{% endblock %}

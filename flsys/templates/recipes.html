@@ -1,0 +1,45 @@
+<!-- prettier-ignore -->
+{% extends 'template.html' %}
+{% block title %}Flavours 101{% endblock %}
+{% load static %}
+{% block form_table_div %}
+
+ <h1 class="recipe-label">
+	Easy Recipes
+</h1>
+
+<p class="p1">Are you looking for a new recipe to try? Flavours101 has got you covered for Breakfast, Lunch, Dinner, Desserts, and even Vegan options. <br>Below are some of our favorite comfort food recipes that are simple, warm, and tasty.
+</p>
+
+<h3 class="tagline">Happy Cooking!</h3>
+
+<br />
+
+<div class="recipes">
+	<section>
+		<a href="/flsys/Breakfast/" >
+    		<img src="{% static 'img/Breakfast.jpg' %}" alt="Unsplash"/>
+    		<figcaption>Breakfast</figcaption>
+  		</a>
+	</section>
+	<section>
+		<a href="/flsys/Mains/">
+    		<img src="{% static 'img/pinakbet.jpg' %}" alt="flavours101" />
+    		<figcaption>Mains</figcaption>
+  		</a>
+	</section>
+	<section>
+		<a href="/flsys/Sweets/" >
+    		<img src="{% static 'img/muffin.jpg' %}" alt="flavours101"/>
+    		<figcaption>Sweets</figcaption>
+  		</a>
+	</section>
+	<section>
+		<a href="/flsys/Healthy/" >
+    		<img src="{% static 'img/sandwich.jpg' %}" alt="Unsplash"/>
+    		<figcaption>Healthy</figcaption>
+  		</a>
+	</section>
+</div>
+
+{% endblock %}
