@@ -7,3 +7,5 @@ geckodriver.log
 *.pot
 *.log
 .static
+.env
+local.py
